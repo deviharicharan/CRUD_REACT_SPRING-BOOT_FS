@@ -16,9 +16,13 @@ public class UserController {
     @Autowired
     UserDAO dao;
 
+    @GetMapping(value = "/")
+    String homePage() {
+        return "Welcome to the Backend Service";
+    }
+
     @GetMapping(value = "/getAll")
     ResponseEntity<List<UserEntity>> getUsers() {
-        return new ResponseEntity<List<UserEntity>>(dao.findAll(),HttpStatus.OK);
-
+        return new ResponseEntity<List<UserEntity>>(dao.findAll(), HttpStatus.OK);
     }
 }
