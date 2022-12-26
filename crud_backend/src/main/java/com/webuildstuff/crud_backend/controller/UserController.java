@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.webuildstuff.crud_backend.entity.UserEntity;
 import com.webuildstuff.crud_backend.repository.UserDAO;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @RestController
 public class UserController {
@@ -21,8 +24,14 @@ public class UserController {
         return "Welcome to the Backend Service";
     }
 
-    @GetMapping(value = "/getAll")
+    @RequestMapping(value = "/getAll", method = RequestMethod.GET)
     ResponseEntity<List<UserEntity>> getUsers() {
         return new ResponseEntity<List<UserEntity>>(dao.findAll(), HttpStatus.OK);
     }
+
+    @RequestMapping(value = "/addUser", method = RequestMethod.POST)
+    ResponseEntity<UserEntity> addUser(@RequestBody UserEntity entity) {
+        return new ResponseEntity<UserEntity>(dao.save(entity), HttpStatus.CREATED);
+    }
+
 }
