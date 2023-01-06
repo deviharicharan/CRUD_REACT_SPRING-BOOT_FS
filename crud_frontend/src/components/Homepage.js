@@ -13,7 +13,6 @@ export default function Homepage() {
   };
   return (
     <div>
-      <Navbar name="Add User" />
       <div className="container">
         <div className="py-4">
           <table className="table border shadow">
@@ -39,21 +38,18 @@ export default function Homepage() {
                     <td>{user.mobile}</td>
                     <td>{user.office}</td>
                     <td>
-                      <div
-                        class="btn-group"
-                        role="group"
-                        aria-label="Button group name"
+                      <button type="button" class="btn btn-primary mx-2">
+                        Edit
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-outline-primary  mx-2"
                       >
-                        <button type="button" class="btn btn-primary m-1">
-                          Edit
-                        </button>
-                        <button type="button" class="btn btn-warning  m-1">
-                          View
-                        </button>
-                        <button type="button" class="btn btn-danger m-1">
-                          Delete
-                        </button>
-                      </div>
+                        View
+                      </button>
+                      <button type="button" class="btn btn-danger mx-2">
+                        Delete
+                      </button>
                     </td>
                   </tr>
                 );

@@ -8,7 +8,6 @@ function Navbar(props) {
           <a className="navbar-brand" href="index.html">
             CRUD Full Stack Application
           </a>
-          <button className="btn btn-secondary">{props.name}</button>
         </div>
       </nav>
     </div>
