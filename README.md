@@ -1,1 +1,2 @@
 # CRUD_REACT_SPRING-BOOT_FS
+This is a full-stack application that allows users to perform basic create, read, update, and delete (CRUD) operations on a database using a React frontend and a Spring Boot backend. The React frontend allows users to add, delete, and update data, as well as view a list of stored data. The Spring Boot backend handles data persistence using a database and exposes a RESTful API for the React frontend to interact with. This application is a great example of how to build a simple CRUD application using these popular technologies.
